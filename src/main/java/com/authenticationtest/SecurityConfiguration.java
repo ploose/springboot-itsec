@@ -24,8 +24,5 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers( "/index").permitAll() // /index will be accessible directly no need of any authentication
                 .anyRequest().authenticated(); // it's indicate all request will be secure
-
-        http.csrf().disable();
-
     }
 }
